@@ -10,13 +10,13 @@ const express = require("express");
 const app = express();
 const photosRouter = require("./Routes/photosRoute");
 
-// app.set("trust proxy", 1);
-// app.use(
-//   rateLimiter({
-//     windowMs: 15 * 60 * 1000,
-//     max: 60,
-//   })
-// );
+app.set("trust proxy", 1);
+app.use(
+  rateLimiter({
+    windowMs: 15 * 60 * 1000,
+    max: 60,
+  })
+);
 app.use(express.json());
 app.use(helmet());
 app.use(xss());
