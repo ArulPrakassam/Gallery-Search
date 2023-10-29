@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Search</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+      integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <section class="main-section">
+        <!-- buffer loading -->
+        <div class="buffer-container">
+          <div class="loading"></div>
+        </div>
+        <!-- nav -->
+        <nav class="nav-center">
+          <a href="/" class="logo">
+            <h1><i class="fa-solid fa-images"></i> Gallery Search</h1>
+          </a>
+        </nav>
+        <!-- header section -->
+        <section class="header-section">
+          <div class="header-title">
+            <h1>
+              Search Free Stock Photos <i class="fa-brands fa-envira"></i>
+            </h1>
+          </div>
+
+          <form class="form-input">
+            <input
+              type="search"
+              name="search"
+              class="search-input"
+              value=""
+              placeholder="Search for photos"
+              autofocus
+            />
+            <button type="submit" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass search-btn-icon"></i>
+            </button>
+          </form>
+        </section>
+      </section>
+
+      <!-- photos section -->
+
+      <section class="photos-section">
+        <div class="photos-section-header">
+          <h1 class="title">Free Stock Photos</h1>
+        </div>
+
+        <!-- photo grid -->
+        <div class="photo-grid">
+          <div class="items-container">
+            <div class="image-loading loading"></div>
+            <!-- dynamic content will come here -->
+          </div>
+          <!-- no input  -->
+          <div class="error-message hide"></div>
+
+          <div class="loading-header hide">
+            <div class="dot one"></div>
+            <div class="dot two"></div>
+            <div class="dot three"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer section -->
+      <footer class="footer-section">
+        <p class="footer-credits">
+          Designed and Developed by
+          <a href="https://arulprakassam.github.io/" target="_blank"
+            >Arul Prakassam.</a
+          >
+          <a href="https://www.pexels.com" target="_blank"
+            >Free Photos are Powered by Pexels.com
+            <span
+              ><img src="https://images.pexels.com/lib/api/pexels.png"
+            /></span>
+          </a>
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap");
+
+/* font-family: 'Noto Sans', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+.main-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    url("./header-bg.jpg") center/ cover fixed no-repeat;
+  min-height: 400px;
+}
+.nav-center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 5px;
+  color: white;
+}
+.search-page .logo h1 {
+  color: #0077b6;
+}
+
+.header-section {
+  margin-top: 50px;
+  padding: 10px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.header-title h1 {
+  font-size: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+.form-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-input {
+  padding: 15px;
+  width: 500px;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6c757d;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #e9ecef;
+}
+.search-input::placeholder {
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 150px;
+}
+.search-input:focus {
+  outline: none;
+}
+.search-btn {
+  padding: 17px;
+  background-color: transparent;
+  border: none;
+  background-color: #e9ecef;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.search-btn-icon {
+  font-size: 1rem;
+  color: #6c757d;
+  cursor: pointer;
+}
+.search-btn-icon:hover {
+  color: #0077b6;
+}
+
+@media screen and (max-width: 594px) {
+  .search-input {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 561px) {
+  .nav-center.search-page {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .logo h1 {
+    font-size: 1.7rem;
+  }
+  .header-title h1 {
+    font-size: 1.8rem;
+  }
+  .search-input,
+  .search-input::placeholder {
+    font-size: 0.8rem;
+  }
+  .search-btn-icon {
+    font-size: 0.9rem;
+  }
+  .search-btn {
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 384px) {
+  .search-input {
+    width: 250px;
+  }
+
+  .search-btn-icon {
+    font-size: 0.9rem;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  .form-input {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 302px) {
+  .search-input {
+    width: 100%;
+  }
+}
+/* footer section */
+.footer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.footer-credits img {
+  width: 50px;
+  height: 20px;
+}
+
+.footer-credits {
+  padding: 10px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  color: black;
+}
+.footer-credits a {
+  color: black;
+}
+.footer-credits a:hover {
+  color: #0077b6;
+}
+@media screen and (max-width: 425px) {
+  .footer-credits {
+    font-size: 0.8rem;
+  }
+}
+
+/* photos section */
+
+.photos-section-header {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+.title {
+  font-size: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+.photo-grid {
+  padding: 20px;
+}
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 5px;
+}
+.single-item {
+  margin-bottom: 5px;
+  min-height: 200px;
+  height: auto;
+  min-width: calc(80vw / 3);
+}
+
+.single-item img {
+  width: calc(80vw / 3);
+  height: inherit;
+  object-fit: cover;
+  transition: opacity 200ms ease-in-out;
+}
+
+@media screen and (max-width: 550px) {
+  .single-item {
+    min-width: calc(80vw / 2);
+  }
+  .single-item img {
+    width: calc(80vw / 2);
+  }
+}
+
+/* loading */
+
+.buffer-container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.loading {
+  width: 2rem;
+  height: 2rem;
+  border: 3.5px solid #dee7f0;
+  border-radius: 50%;
+  border-top-color: #0077b6;
+  animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.dot {
+  background-color: #0077b6;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: all 200ms linear;
+  padding: 5px;
+}
+.one {
+  animation: transition-one 2s linear infinite;
+}
+.two {
+  animation: transition-two 2s linear infinite;
+}
+.three {
+  animation: transition-three 2s linear infinite;
+}
+@keyframes transition-one {
+  from {
+    transform: translateX(-200px);
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+    transform: translateX(100px);
+  }
+}
+@keyframes transition-two {
+  from {
+    transform: translateX(-150px);
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+    transform: translateX(150px);
+  }
+}
+@keyframes transition-three {
+  from {
+    transform: translateX(-100px);
+    opacity: 1;
+  }
+  to {
+    opacity: 0.4;
+    transform: translateX(200px);
+  }
+}
+
+/* error-message */
+
+.error-message {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  font-family: "Noto Sans", sans-serif;
+  display: grid;
+  place-items: center;
+  color: #0077b6;
+}
+.hide {
+  display: none;
+}
