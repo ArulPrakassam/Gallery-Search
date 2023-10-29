@@ -42,11 +42,8 @@ const fetchData = async (url) => {
     }
     if (URLParam.get("search")) {
       title.textContent = URLParam.get("search");
-      searchInput.value = URLParam.get("search");
-    } else {
-      title.textContent = "Free Stock Photos";
-      searchInput.value = "";
     }
+
     displayPhotos(data);
   } catch (error) {
     loading.classList.add("hide");
